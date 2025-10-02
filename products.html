@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TSD Security Solutions | Products</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo">
+        <a href="index.html"><img src="images/TSD2.png" alt="TSD Security Solutions"></a>
+      </div>
+      
+      <div class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+      
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html" class="active">Products</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      
+      <div class="icons">
+        <a href="#"><i class="fas fa-user"></i></a>
+        <a href="#">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Our Security Products</h1>
+      <p>Discover our comprehensive range of security solutions</p>
+    </div>
+  </section>
+
+  <!-- Search Bar -->
+  <section class="search-section">
+    <div class="container">
+      <div class="search-container">
+        <input type="text" placeholder="Search products..." class="search-bar">
+        <button class="search-btn"><i class="fas fa-search"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="products-page">
+    <div class="container">
+      <div class="products-container">
+        <aside class="sidebar">
+          <h3>Filter by Category</h3>
+          <ul class="category-filters">
+            <li><a href="#" class="active">All Products</a></li>
+            <li><a href="#">CCTV Cameras</a></li>
+            <li><a href="#">Alarm Systems</a></li>
+            <li><a href="#">Access Control</a></li>
+            <li><a href="#">Monitoring Systems</a></li>
+            <li><a href="#">Other</a></li>
+          </ul>
+          
+          <div class="price-filter">
+            <h3>Filter by Price</h3>
+            <div class="price-range">
+              <input type="range" min="0" max="5000" value="5000" class="slider" id="priceRange">
+              <div class="price-values">
+                <span>K0</span>
+                <span id="priceValue">K5000</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <div class="products-grid">
+          <!-- Product Cards -->
+          <div class="product-card">
+            <div class="product-img">
+              <img src="images/cam1.jpg" alt="CCTV Camera">
+              <span class="product-badge">Popular</span>
+            </div>
+            <div class="product-content">
+              <h3>HD Security Camera</h3>
+              <p class="product-price">K999</p>
+              <p class="product-desc">High-definition security camera with night vision</p>
+              <div class="product-actions">
+                <a href="product-details.html" class="btn">View Details</a>
+                <a href="https://wa.me/265991234567" class="btn btn-secondary">WhatsApp</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="product-card">
+            <div class="product-img">
+              <img src="images/cam2.jpg" alt="CCTV System">
+              <span class="product-badge">Best Value</span>
+            </div>
+            <div class="product-content">
+              <h3>Complete CCTV System</h3>
+              <p class="product-price">K1,299</p>
+              <p class="product-desc">4-camera system with DVR and monitoring</p>
+              <div class="product-actions">
+                <a href="product-details.html" class="btn">View Details</a>
+                <a href="https://wa.me/265991234567" class="btn btn-secondary">WhatsApp</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="product-card">
+            <div class="product-img">
+              <img src="images/cam3.jpg" alt="Wireless Camera">
+              <span class="product-badge">New</span>
+            </div>
+            <div class="product-content">
+              <h3>Wireless Security Camera</h3>
+              <p class="product-price">K199</p>
+              <p class="product-desc">Easy installation wireless camera with app</p>
+              <div class="product-actions">
+                <a href="product-details.html" class="btn">View Details</a>
+                <a href="https://wa.me/265991234567" class="btn btn-secondary">WhatsApp</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="product-card">
+            <div class="product-img">
+              <img src="images/cam4.jpg" alt="Dome Camera">
+            </div>
+            <div class="product-content">
+              <h3>Dome CCTV Camera</h3>
+              <p class="product-price">K149</p>
+              <p class="product-desc">Discreet dome camera for indoor use</p>
+              <div class="product-actions">
+                <a href="product-details.html" class="btn">View Details</a>
+                <a href="https://wa.me/265991234567" class="btn btn-secondary">WhatsApp</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="product-card">
+            <div class="product-img">
+              <img src="images/cameras.jpg" alt="Bullet Camera">
+            </div>
+            <div class="product-content">
+              <h3>Weatherproof Bullet Camera</h3>
+              <p class="product-price">K299</p>
+              <p class="product-desc">Outdoor camera with weather resistance</p>
+              <div class="product-actions">
+                <a href="product-details.html" class="btn">View Details</a>
+                <a href="https://wa.me/265991234567" class="btn btn-secondary">WhatsApp</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="product-card">
+            <div class="product-img">
+              <img src="images/cam1.jpg" alt="PTZ Camera">
+            </div>
+            <div class="product-content">
+              <h3>PTZ Security Camera</h3>
+              <p class="product-price">K599</p>
+              <p class="product-desc">Pan-tilt-zoom camera with remote control</p>
+              <div class="product-actions">
+                <a href="product-details.html" class="btn">View Details</a>
+                <a href="https://wa.me/265991234567" class="btn btn-secondary">WhatsApp</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Pagination -->
+      <div class="pagination">
+        <a href="#" class="page-btn disabled"><i class="fas fa-chevron-left"></i></a>
+        <a href="#" class="page-btn active">1</a>
+        <a href="#" class="page-btn">2</a>
+        <a href="#" class="page-btn">3</a>
+        <a href="#" class="page-btn"><i class="fas fa-chevron-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-container">
+        <div class="footer-col">
+          <h3>TSD Security Solutions</h3>
+          <p>Providing top-quality security solutions for homes and businesses. Your safety is our priority.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Contact Info</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Lilongwe, Malawi</p>
+          <p><i class="fas fa-phone"></i> +265 999 947 947</p>
+          <p><i class="fas fa-envelope"></i> info@tsdsecurity.com</p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 TSD Security Solutions. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/265991234567" class="whatsapp-float">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="js/script.js"></script>
+  <script>
+    // Price range filter functionality
+    const priceRange = document.getElementById('priceRange');
+    const priceValue = document.getElementById('priceValue');
+    
+    if (priceRange && priceValue) {
+      priceRange.addEventListener('input', function() {
+        priceValue.textContent = 'K' + this.value;
+      });
+    }
+    
+    // Category filter functionality
+    const categoryFilters = document.querySelectorAll('.category-filters a');
+    
+    categoryFilters.forEach(filter => {
+      filter.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Remove active class from all filters
+        categoryFilters.forEach(f => f.classList.remove('active'));
+        
+        // Add active class to clicked filter
+        this.classList.add('active');
+        
+        // In a real implementation, you would filter products here
+        console.log('Filtering by:', this.textContent);
+      });
+    });
+    
+    // Search functionality
+    const searchBar = document.querySelector('.search-bar');
+    const searchBtn = document.querySelector('.search-btn');
+    
+    if (searchBar && searchBtn) {
+      const performSearch = () => {
+        const searchTerm = searchBar.value.trim();
+        if (searchTerm) {
+          console.log('Searching for:', searchTerm);
+          // In a real implementation, you would filter products here
+        }
+      };
+      
+      searchBtn.addEventListener('click', performSearch);
+      searchBar.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+          performSearch();
+        }
+      });
+    }
+  </script>
+</body>
+</html>
