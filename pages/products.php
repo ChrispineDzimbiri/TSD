@@ -75,7 +75,7 @@ $categories = $categories_stmt->fetchAll(PDO::FETCH_ASSOC);
                     <li>
                         <a href="products.php?category=<?php echo $category['id']; ?>" 
                            class="<?php echo $category_id == $category['id'] ? 'active' : ''; ?>">
-                            <?php echo $category['name']; ?>
+                            <?php echo htmlspecialchars($category['name']); ?>
                         </a>
                     </li>
                     <?php endforeach; ?>
@@ -87,15 +87,21 @@ $categories = $categories_stmt->fetchAll(PDO::FETCH_ASSOC);
                     <?php foreach ($products as $product): ?>
                     <div class="product-card">
                         <div class="product-img">
-                            <img src="images/uploads/<?php echo $product['image']; ?>" alt="<?php echo $product['name']; ?>">
+                            <?php if (!empty($product['image']) && file_exists('../images/uploads/' . $product['image'])): ?>
+                                <img src="../images/uploads/<?php echo htmlspecialchars($product['image']); ?>" alt="<?php echo htmlspecialchars($product['name']); ?>">
+                            <?php else: ?>
+                                <!-- Fallback image if product image doesn't exist -->
+                                <img src="../images/cam1.jpg" alt="<?php echo htmlspecialchars($product['name']); ?>">
+                            <?php endif; ?>
+                            
                             <?php if ($product['badge']): ?>
-                            <span class="product-badge"><?php echo $product['badge']; ?></span>
+                            <span class="product-badge"><?php echo htmlspecialchars($product['badge']); ?></span>
                             <?php endif; ?>
                         </div>
                         <div class="product-content">
-                            <h3><?php echo $product['name']; ?></h3>
+                            <h3><?php echo htmlspecialchars($product['name']); ?></h3>
                             <p class="product-price">K<?php echo number_format($product['price'], 2); ?></p>
-                            <p class="product-desc"><?php echo substr($product['description'], 0, 100); ?>...</p>
+                            <p class="product-desc"><?php echo htmlspecialchars(substr($product['description'], 0, 100)); ?>...</p>
                             <div class="product-actions">
                                 <a href="product-details.php?id=<?php echo $product['id']; ?>" class="btn">View Details</a>
                                 <a href="https://wa.me/265991234567?text=Hi, I'm interested in <?php echo urlencode($product['name']); ?> - K<?php echo number_format($product['price'], 2); ?>" class="btn btn-secondary" target="_blank">WhatsApp</a>

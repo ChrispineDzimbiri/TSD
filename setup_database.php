@@ -51,6 +51,18 @@ try {
         )
     ");
     
+    $pdo->exec("
+        ALTER TABLE products MODIFY category_id INT NULL;
+
+        -- Insert some default categories if none exist
+        INSERT IGNORE INTO categories (name, description) VALUES 
+        ('CCTV Cameras', 'Security cameras for indoor and outdoor surveillance'),
+        ('Alarm Systems', 'Intrusion detection and alarm systems'),
+        ('Access Control', 'Door access and biometric systems'),
+        ('Monitoring', '24/7 security monitoring solutions');
+        ");
+
+
     // Insert default admin (password: admin123)
     $hashed_password = password_hash('admin123', PASSWORD_DEFAULT);
     $pdo->exec("INSERT IGNORE INTO admin_users (username, password, email) 
