@@ -1,0 +1,37 @@
+RewriteEngine On
+
+# Security - Prevent access to config directory
+RewriteRule ^config/ - [F,L]
+
+# Security - Prevent access to includes directory
+RewriteRule ^includes/ - [F,L]
+
+# Redirect to login if accessing admin without authentication
+RewriteCond %{REQUEST_URI} ^/admin/(categories|products|dashboard)\.php$
+RewriteCond %{HTTP_COOKIE} !admin_logged_in=true [NC]
+RewriteRule ^admin/(.*)$ admin/login.php [L,R=302]
+
+# Pretty URLs for products
+RewriteRule ^product/([0-9]+)/?$ pages/product-details.php?id=$1 [L,QSA]
+
+# Error pages
+ErrorDocument 404 /404.php
+ErrorDocument 403 /403.php
+
+# Compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript
+</IfModule>
+
+# Cache control
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpg "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/pdf "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 month"
+    ExpiresByType text/html "access plus 600 seconds"
+</IfModule>
