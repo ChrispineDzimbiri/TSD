@@ -20,7 +20,7 @@ if (session_status() == PHP_SESSION_NONE) {
     <header class="header">
         <div class="container header-container">
             <div class="logo">
-                <a href="index.php"><img src="images/TSD2.png" alt="TSD Security Solutions"></a>
+                <a href="index.php"><img src="./../images/TSD2.png" alt="TSD Security Solutions"></a>
             </div>
             
             <div class="mobile-menu-btn">
